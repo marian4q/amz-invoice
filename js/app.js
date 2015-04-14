@@ -16,4 +16,34 @@
 	
 	// var totalPrice = prompt("Ingrese Costo total");
 	// $(".total-price").text(totalPrice);
+
+
+	//TR Row
+var tabTr = document.createElement ("TR");
+tabTr.id = "item-desc";
+
+//TD left Cell
+var tabTd = document.createElement("TD")
+    tabTd.setAttribute("colspan", "1");
+    tabTd.setAttribute("valign", "top");
+    content = document.createTextNode("1 of:");
+
+    tabTd.appendChild(content);
+
+// List Element I
+var tabI = document.createElement("I");
+    tabI.setAttribute("class", "item one");
+
+    content = document.createTextNode(itemDesc);
+    tabI.appendChild(content);
+    tabI.appendChild(brEl);
+    tabI.appendChild(brEl);
+
+
+tabTr.appendChild(tabTd);
+tabTd.appendChild(tabI);
+
+
+var a = document.getElementById("table-items-body");
+a.appendChild(tabTr);
 })();
